@@ -26,3 +26,9 @@ Keep pressing the arrow keys until you see a result like in the picture below:
 - Node.js — JavaScript runtime environment for development and running the project
 - npm — package manager for dependency installation and script management
 - Git — version control system
+
+##### how to set up the project locally
+1) Clone the repository:
+git clone https://github.com/JulyaPetrovskaya/js-2048-game.git
+2) Install dependencies: npm install
+3) Run the project locally: npm start
