@@ -21,11 +21,11 @@ function addNewNumber() {
   if (emptyCells.length > 0) {
     const randomIndex = Math.floor(Math.random() * emptyCells.length);
     const randomCell = emptyCells[randomIndex];
-    
+
     randomCell.value = Math.random() < 0.9 ? 2 : 4;
 
     scoreDisplay.textContent = score;
-  
+
     updateCells();
   }
 }
@@ -48,7 +48,7 @@ function updateCells() {
         'field-cell--256',
         'field-cell--512',
         'field-cell--1024',
-        'field-cell--2048'
+        'field-cell--2048',
       );
       cell.classList.add(`field-cell--${cellValue}`);
     } else {
@@ -65,7 +65,7 @@ function updateCells() {
         'field-cell--256',
         'field-cell--512',
         'field-cell--1024',
-        'field-cell--2048'
+        'field-cell--2048',
       );
     }
   });
@@ -106,7 +106,7 @@ function resetGame() {
       'field-cell--256',
       'field-cell--512',
       'field-cell--1024',
-      'field-cell--2048'
+      'field-cell--2048',
     );
   });
 
@@ -121,7 +121,7 @@ function checkGameOver() {
   const emptyCells = cellsData.filter(cell => cell.value === 0);
 
   if (emptyCells.length === 0) {
-      for (let i = 0; i < cellsData.length; i++) {
+    for (let i = 0; i < cellsData.length; i++) {
       const cell = cellsData[i];
 
       if (i % 4 !== 3 && cell.value === cellsData[i + 1].value) {
@@ -154,9 +154,10 @@ document.addEventListener('keydown', (eventKey) => {
 });
 
 function mergeCells(row) {
-  const arr = row.filter(num => num); 
+  const arr = row.filter(num => num);
+
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === arr[i + 1]) { 
+    if (arr[i] === arr[i + 1]) {
       arr[i] *= 2;
       score += arr[i];
       arr.splice(i + 1, 1);
