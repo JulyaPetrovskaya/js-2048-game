@@ -12,7 +12,7 @@ Keep sliding and merging tiles to reach the 2048 tile.
 The game ends if no moves are possible.
 Keep pressing the arrow keys until you see a result like in the picture below:
 
-![Game Screenshot](./assets/win.png)
+![Game Screenshot](./src/assets/win.png)
 
 #### Main Technologies and Frameworks:
 - JavaScript (ES6+) — core game logic and event handling
